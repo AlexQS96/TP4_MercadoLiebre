@@ -24,7 +24,8 @@ body, html {
 }
 
 .buscador{
-    padding: 0px 10px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 10px;
 }
 
 .compracuotas{
@@ -57,11 +58,27 @@ body, html {
     justify-content: center;
 }
 
+#buscadorBoton {
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+#buscadorBarra {
+    margin: 0;
+    padding: 0 0 0 0;
+    width: 170px;
+}
+
 /*Colores del boton hamburguesa*/
 
 #menucolor{
     background-color:var(--Celeste);
     border-color:var(--Celeste);
+    height: 28px;
+    border-radius: 5px;
+    border-style: solid;
+    margin: 0;
+    padding: 0 5px 0 5px;
 }
 
 #menucolor i{
