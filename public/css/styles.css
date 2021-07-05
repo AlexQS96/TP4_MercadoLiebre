@@ -43,10 +43,24 @@ body{
     font-size: 12px;
 }
 
+/*boton hamburguesa*/
+
 .burger-menu{
     display: flex;
     justify-content: center;
 }
+
+#menucolor{
+    background-color:var(--Celeste);
+    border-color:var(--Celeste);
+    height: 28px;
+    border-radius: 5px;
+    margin: 0;
+    padding: 1px 5px 0 5px;
+    border-style: solid;
+}
+
+/**/
 
 #buscadorBoton {
     margin: 0;
@@ -57,18 +71,6 @@ body{
     margin: 0;
     padding: 0 0 0 0;
     width: 170px;
-}
-
-/*Colores del boton hamburguesa*/
-
-#menucolor{
-    background-color:var(--Celeste);
-    border-color:var(--Celeste);
-    height: 28px;
-    border-radius: 5px;
-    border-style: solid;
-    margin: 0;
-    padding: 0 5px 0 5px;
 }
 
 #menucolor i{
@@ -94,30 +96,31 @@ footer {
     width: 100%;
 }
 
+footer li{
+    color: var(--Gris_oscuro);
+    text-decoration: none;
+    font-size: var(--cuerpo);
+}
+
 .footer-text{
     margin-top: 35px;
     text-align: center;
     height: 40px;
+    font-family: var(--letra);
 }
 
-footer div div ul {
-    padding: 0;
-    background-color: var(--Gris_claro); 
-}
-
-footer li{
-    color: var(--Gris_oscuro);
-    text-decoration: none;
-    font-family: 'Roboto';
+#iconsFooter ul div li i{
+    color: var(--Celeste);
+    font-size: 1.5rem;
 }
 
 #iconsFooter ul li{
     list-style-type: none;
 }
 
-#iconsFooter ul div li i{
-    color: var(--Celeste);
-    font-size: 1.5rem;
+footer div div ul {
+    padding: 0;
+    background-color: var(--Gris_claro); 
 }
 
 #tituloIcon{
@@ -127,10 +130,10 @@ footer li{
 }
 
 #espacioabajo{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 #espacioicon{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /*
