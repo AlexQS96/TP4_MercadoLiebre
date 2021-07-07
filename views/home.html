@@ -4,43 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0">
-    <title>Mercadoliebre</title>
+    <title>Mercado Liebre Argentina</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 rel="stylesheet" />
     <link rel="stylesheet" href="../public/css/styles.css" >
+    <link rel="icon" type="image/png" href="../public/images/favicon-32x32.png">
+
 </head>
-<body width = "device-width">
+<body width="device-width">
     <div id="page-container">
         <div id="content-wrap">
         <header>
-            <img class="logo" src="../public/images/logo-mercado-liebre.svg">
-            <br>
-            <div class="buscador">
-                <input id="buscadorBarra" type="text" placeholder="Buscar productos, marcas" name="search">
-                <button id="buscadorBoton"><i class="fa fa-search"></i></button>
+            <div>
+                <a href="#"><img id="logo" src="../public/images/logo-mercado-liebre.svg"></a>
             </div>
-            <div class="compracuotas">
+            
+            <div id="searchBar">
+                <input id="inputBar" type="text" placeholder="Buscar productos, marcas" name="search">
+                <button id="searchButton"><i class="fa fa-search"></i></button>
+            </div>
+
+            <div id="duesText">
                 <span><i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito</span>
             </div>
-            <ul class="lista">
-                <li>Ofertas</li>
-                <li>Tiendas Oficiales</li>
-                <li>Vender</li>
-                <li>Ayuda</li>
-                <br>
-                <li>Crea tu Cuenta <i class="fas fa-id-card"></i></li>
-                <li>Ingresá <i class="fas fa-sign-in-alt"></i></li>
-                <li>Mis Compras <i class="fas fa-shopping-basket"></i></li>
-            </ul>
+            <nav>
+                <ul class="separateThis">
+                    <li><a href="">Ofertas</a></li>
+                    <li><a href="">Tiendas Oficiales</a></li>
+                    <li><a href="">Vender</a></li>
+                    <li><a href="">Ayuda</a></li>
+                </ul>
+                <ul class="separateThis">
+                    <li><a href="">Crea tu Cuenta </a><i class="fas fa-id-card"></i></li>
+                    <li><a href="">Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
+                    <li><a href="">Mis Compras </a><i class="fas fa-shopping-basket"></i></li>
+                </ul>
+            </nav>
+
             <div class="burger-menu">
-                <button id="menucolor"><i class="fas fa-bars"></i></button>
+                <button id="buttonColorBurger"><i class="fas fa-bars"></i></button>
             </div>
+
         </header>
         <main>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In facere laborum illum labore debitis. Consectetur adipisci architecto debitis aut, nemo aliquam impedit ullam temporibus dignissimos incidunt obcaecati laborum pariatur ab.</p>
+            <section class="product">
+                <h3>Basado en tu ultima visita</h3>
+                    <article>
+                        <img class="productImage"
+                        src="../public/images/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
+                        <h5>Cafetera Moulinex</h5>
+                        <p>$6.770</p>
+                        <p>40% OFF</p>
+                    </article>
+                    <article>
+                        <img class="productImage"
+                        src="../public/images/img-macbook-pro-2019.jpg" alt="Macbook Pro 2019">
+                        <h5>Macbook Pro 2019</h5>
+                        <p>$216.770</p>
+                        <p>40% OFF</p>
+                    </article>
+            </section>
         </main>
         </div>
         <footer>
@@ -48,27 +74,27 @@ rel="stylesheet" />
                 <div id = "iconsFooter">
                     <ul>
                         <div>
-                            <li id="espacioicon"><i class="fas fa-credit-card"></i></li>
+                            <li id="iconSpaceBottom"><i class="fas fa-credit-card"></i></li>
                             <span id="tituloIcon">Pagá con tarjeta o en efectivo</span>
                             <li>Con MercadoLiebreCash tenés cuotas sin</li>
                             <li>interés con tarjeta o efectivo en puntos de pago.</li>
-                            <li id="espacioabajo">¡Y siempre es seguro!</li>
+                            <li id="bottomSpace">¡Y siempre es seguro!</li>
                         </div>
                         <div>
-                            <li id="espacioicon"><i class="fas fa-gift"></i></li>
+                            <li id="iconSpaceBottom"><i class="fas fa-gift"></i></li>
                             <span id="tituloIcon">Envío gratis desde los $2.500</span>
                             <li>Solo por estar registrad@ en MercadoLiebre</li>
                             <li>tenés envíos gratis en miles de productos. Es</li>
-                            <li id="espacioabajo">un beneficio de MercadoPuntos.</li>
+                            <li id="bottomSpace">un beneficio de MercadoPuntos.</li>
                         </div>
                         <div>
-                            <li id="espacioicon"><i class="fas fa-user-shield"></i></li>
+                            <li id="iconSpaceBottom"><i class="fas fa-user-shield"></i></li>
                             <span id="tituloIcon">Seguridad de principio a fin</span>
                             <li>¿No te gusta? ¡Devolvelo! En MercadoLiebre</li>
                             <li>no hay nada que no puedas hacer porque</li>
-                            <li id="espacioabajo">estás siempre protegid@.</li>
+                            <li id="bottomSpace">estás siempre protegid@.</li>
                         </div>
-                        <li>Copyright © 1999-2020 MercadoLiebre S.R.L</li>
+                        <li class="separateThis">Copyright © 1999-2020 MercadoLiebre S.R.L</li>
                     </ul>
                 </div>
             </div>
