@@ -10,10 +10,6 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/home.html"))
 })
 
-app.get("/a", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/a.html"))
-})
-
 app.listen(port, () => {
     console.log(`Servidor Mercado-Liebre Corriendo en ${port}\ https://localhost:${port}`);
 });
