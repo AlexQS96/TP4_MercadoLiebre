@@ -8,18 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-rel="stylesheet" />
-    <link rel="stylesheet" href="../public/css/styles.css" >
-    <link rel="icon" type="image/png" href="../public/images/favicon-32x32.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/styles.css" >
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png">
 
 </head>
 <body width="device-width">
-    <div id="page-container">
-        <div id="content-wrap">
+    <div class="page-container">
         <header>
             <div>
-                <a href="#"><img id="logo" src="../public/images/logo-mercado-liebre.svg"></a>
+                <a href="/"><img id="logo" src="/images/logo-mercado-liebre.svg"></a>
             </div>
             
             <div id="searchBar">
@@ -30,7 +28,11 @@ rel="stylesheet" />
             <div id="duesText">
                 <span><i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito</span>
             </div>
-            <nav>
+
+            
+            <input type="checkbox" id="menuButtonClick">
+
+            <nav id="dropdown_List">
                 <ul class="separateThis">
                     <li><a href="">Ofertas</a></li>
                     <li><a href="">Tiendas Oficiales</a></li>
@@ -43,35 +45,64 @@ rel="stylesheet" />
                     <li><a href="">Mis Compras </a><i class="fas fa-shopping-basket"></i></li>
                 </ul>
             </nav>
+            
+            <label for="menuButtonClick">
+                <div class="burgerButton">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </label>
 
-            <div class="burger-menu">
-                <button id="buttonColorBurger"><i class="fas fa-bars"></i></button>
-            </div>
-
+            <img id="banner_Img" src="/images/img-home-banner.jpg" alt="banner">
         </header>
         <main>
             <section>
                 <h3>Basado en tu ultima visita</h3>
-                <br>
+                <div class="product_List">
                     <article class="product">
                         <img class="productImage"
-                        src="../public/images/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
-                        <h5>Cafetera Moulinex</h5>
-                        <p>$6.770</p>
-                        <p>40% OFF</p>
+                        src="/images/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
+                        <div class="product_Detail_Preview">
+                            <i class="fas fa-truck shipping_DiscountColor"></i>
+                            <h5>Cafetera Moulinex</h5>
+                            <p>$6.770</p>
+                            <p class="shipping_DiscountColor">40% OFF</p>
+                        </div>
                     </article>
                     <article class="product">
                         <img class="productImage"
-                        src="../public/images/img-macbook-pro-2019.jpg" alt="Macbook Pro 2019">
-                        <h5>Macbook Pro 2019</h5>
-                        <p>$216.770</p>
-                        <p>40% OFF</p>
+                        src="/images/img-macbook-pro-2019.jpg" alt="Macbook Pro 2019">
+                        <div class="product_Detail_Preview">
+                            <i class="fas fa-truck shipping_DiscountColor"></i>
+                            <h5>Macbook Pro 2019</h5>
+                            <p>$216.770</p>
+                            <p class="shipping_DiscountColor">40% OFF</p>
+                        </div>
                     </article>
+                    <article class="product">
+                        <img class="productImage"
+                        src="/images/img-samsung-galaxy-s10.jpg" alt="S10">
+                        <div class="product_Detail_Preview">
+                            <i class="fas fa-truck shipping_DiscountColor"></i>
+                            <h5>Samsung Galaxy S10</h5>
+                            <p>$45.770</p>
+                            <p class="shipping_DiscountColor">20% OFF</p>
+                        </div>
+                    </article>
+                    <article class="product">
+                        <img class="productImage"
+                        src="/images/img-tv-samsung-smart.jpg" alt="Smart TV">
+                        <div class="product_Detail_Preview">
+                            <i class="fas fa-truck shipping_DiscountColor"></i>
+                            <h5>Samsung Smart TV</h5>
+                            <p>$42.770</p>
+                            <p class="shipping_DiscountColor">30% OFF</p>
+                        </div>
+                    </article>
+                </div>
             </section>
         </main>
-        </div>
         <footer>
-            <div class="footer-text">
+            <ul class="footer-text">
                 <div id = "iconsFooter">
                     <ul>
                         <div>
@@ -98,7 +129,7 @@ rel="stylesheet" />
                         <li class="separateThis">Copyright © 1999-2020 MercadoLiebre S.R.L</li>
                     </ul>
                 </div>
-            </div>
+            </ul>
         </footer>
     </div>
 </body>

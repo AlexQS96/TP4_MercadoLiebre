@@ -16,48 +16,69 @@
     --descripcion: 16px;
 }
 
-html{
+/* General Settings */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: var(--letra);
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html,body{
+    background-color:var(--Amarillo);
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    color: black;
+}
+
+header{
+    width: 100%;
 }
 
 h3{
-    margin:0;
+    padding:5px 0 0 0;
 }
 
-#logo{
-    width: 200px;
-    height: 50px;
-    padding: 15px;
-    padding-bottom: 10px;
-}
-
-body{
-    background-color:var(--Amarillo);
-    margin: 0px;
-    display: grid;
+main{
+    min-width: 90%;
+    padding-top: 10px;
+    background-color: var(--Gris_claro);
+    text-align: center;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    flex:1;
+    flex-grow: 1;
 }
 
-#page-container {
-    position: relative;
-    min-height: 100vh;
+.page-container {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
   
-#content-wrap {
-    padding-bottom: 2.5rem; /*footer space*/
-}
 
 /* Header */
 
+#logo{
+    max-width: 40%;
+    margin: 10px 20px;
+}
+
 #searchBar{
-    margin: 0 0 0 0;
-    padding: 0 0 0 10px;
+    margin: 0 0 0 10px;
 }
 
 #searchButton {
-    margin: 0;
-    padding: 0 0 0 0;
+    margin: -4px;
 }
 
 #inputBar {
@@ -73,55 +94,93 @@ body{
     text-align: center;
 }
 
+#banner_Img{
+    max-width: 100%;
+    margin:0 0 -4px 0;
+}
+
 /*Burger Button*/
 
-.burger-menu{
+.burgerButton{
+    background-color: var(--Celeste);
+    width: 35px;
+    height: 35px;
+    align-items: center;
     display: flex;
     justify-content: center;
-}
-
-#buttonColorBurger{
-    background-color:var(--Celeste);
-    border-color:var(--Celeste);
-    height: 30px;
     border-radius: 5px;
-    margin: 15px;
-    padding: 1px 4px 0 4px;
-    border-style: solid;
-    color: white;
+    margin: 5px auto 10px auto;
 }
 
-/*Main*/
+.burgerButton i{
+    color: white;
+    transform: scale(1.3);
+    margin-top: 1px;
+}
 
-main{
-    background-color: var(--Gris_claro);
-    padding:15px;
-    text-align: center;
+input[type=checkbox] {
+    display: none;
+}
+
+#dropdown_List {
+    display: none;
+    padding: 8px 20px 8px 26px;
+}
+
+input[type=checkbox]:checked ~ #dropdown_List {
+    display: block;
+}
+
+/* End Button Burger */
+
+/* Main Section */
+
+.product_List{
+    padding: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
 }
 
 .productImage{
-    height:180px;
-    width:180px;
+    width:100%;
 }
 
 .product{
     background-color: #fff;
-    margin: auto;
-    width: 180px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 100%;
 }
 
-/**/
-
-nav ul{
-    padding:0;
+.product_Detail_Preview{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    border: 1px solid var(--Gris_Intermedio);
 }
 
-nav ul li{
-    list-style-type: none;
+.product_Detail_Preview p{
+    margin: 2px 0;
 }
 
-nav ul li a{
-    text-decoration: none;
+.product_Detail_Preview h5{
+    margin: 5px 0;
+}
+
+.product_Detail_Preview i{
+    font-size: 15px;
+    border-radius: 50%;
+    border: 1px solid var(--Verde);
+    padding: 6px 5px 6px 6px;
+}
+
+.shipping_DiscountColor{
+    color: var(--Verde);
 }
 
 .separateThis{
@@ -130,11 +189,9 @@ nav ul li a{
 
 /* Footer Section */
 
-footer {
+footer ul {
+    padding: 20px 20px 5px 20px;
     background-color: #fff;
-    position:absolute;
-    bottom:0;
-    width: 100%;
 }
 
 footer li{
@@ -144,23 +201,14 @@ footer li{
 }
 
 .footer-text{
-    
+    display: flex;
+    justify-content: center;
     text-align: center;
-    height: 40px;
 }
 
 #iconsFooter ul div li i{
     color: var(--Celeste);
     font-size: 1.5rem;
-}
-
-#iconsFooter ul li{
-    list-style-type: none;
-}
-
-footer div div ul {
-    padding: 0;
-    background-color: #fff; 
 }
 
 #tituloIcon{
@@ -181,21 +229,9 @@ footer div div ul {
     margin-bottom: 10px;
 }
 
-/*
-Pagá con tarjeta o en efectivo
-Con MercadoLiebreCash tenés cuotas sin
-interés con tarjeta o efectivo en puntos de pago.
-¡Y siempre es seguro!
-
-Envío gratis desde los $2.500
-
-Solo por estar registrad@ en MercadoLiebre
-tenés envíos gratis en miles de productos. Es
-un beneficio de MercadoPuntos.
-
-Seguridad de principio a fin
-¿No te gusta? ¡Devolvelo! En MercadoLiebre
-no hay nada que no puedas hacer porque
-estás siempre protegid@.
-
-*/
+@media (min-width: 991px) {
+    #logo{
+        max-width: 10%;
+        margin: 10px 20px;
+    }
+}
