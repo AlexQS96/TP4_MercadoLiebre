@@ -209,7 +209,7 @@ input[type=checkbox]:checked ~ #dropdown_List {
     display: block;
     border-radius: 50%;
     border: 1px solid var(--Verde);
-    padding: 6px 5px 6px 6px;
+    padding: 6px 6px 6px 5px;
     position: absolute;
     right: 20px;
     top: -15px;
@@ -287,12 +287,13 @@ footer {
 
     #dropdown_List section{
         width: 50%;
+        flex-direction: row;
         margin: auto;
         padding: 20px;
     }
     
     #dropdown_List section a{
-        margin: 10px 10px;
+        margin: 10px 2%;
     }
 
     #dropdown_List section:nth-child(2){
@@ -354,7 +355,7 @@ footer {
     }
     
     #dropdown_List section a{
-        margin: 10px 20px;
+        margin: 10px 2%;
     }
 
     #dropdown_List section:nth-child(2){
