@@ -28,7 +28,7 @@
 }
 
 html,body{
-    background-color:var(--Amarillo);
+    background-color: var(--Gris_claro);
     margin: 0px;
     width: 100%;
     height: 100%;
@@ -40,21 +40,22 @@ a{
 
 header{
     width: 100%;
+    background-color:var(--Amarillo);
 }
 
-h3{
-    padding:5px 0 0 0;
+.title{
+    padding:20px 0;
+    color: var(--Gris_oscuro);
 }
 
 main{
-    min-width: 90%;
-    padding-top: 10px;
-    background-color: var(--Gris_claro);
+    width: 90%;
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex-grow: 1;
+    margin: auto auto 20px auto;
 }
 
 .page-container {
@@ -68,31 +69,51 @@ main{
 
 /* Header */
 
-#logo{
-    max-width: 40%;
-    margin: 10px 20px;
+.navBar{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-#searchBar{
-    margin: 0 0 0 10px;
+.logo{
+    width: 50%;
+    height: 50%;
+    padding: 15px;
 }
 
-#searchButton {
-    margin: -4px;
+.searchBar{
+    display: flex;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    padding-right: 20px;
 }
 
-#inputBar {
-    margin-left: 10px;
-    padding: 0 0 0 0;
-    width: 170px;
+.searchBar input{
+    outline: none;
+    border-style: none;
+    border-radius: 5px 0 0 5px;
+    padding: 6px 0px 6px 6px;
+    width: 100%;
+    font-size: var(--cuerpo);
+}
+
+#searchButton{
+    outline: none;
+    border-style: none;
+    padding: 6px 3px;
+    border-radius: 0 5px 5px 0;
+    background-color: white;
 }
 
 
-#duesText{
+.duesText{
     margin-top: 10px;
     margin-bottom: 10px;
-    text-align: center;
+    margin: auto;
+    font-size: var(--cuerpo);
 }
+
 
 #banner_Img{
     max-width: 100%;
@@ -109,7 +130,7 @@ main{
     display: flex;
     justify-content: center;
     border-radius: 5px;
-    margin: 5px auto 10px auto;
+    margin: 20px auto 20px auto;
 }
 
 .burgerButton i{
@@ -124,11 +145,17 @@ input[type=checkbox] {
 
 #dropdown_List {
     display: none;
-    padding: 8px 20px 8px 26px;
+    font-size: var(--cuerpo);
 }
 
 input[type=checkbox]:checked ~ #dropdown_List {
     display: block;
+}
+
+#dropdown_List section{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
 
 /* End Button Burger */
@@ -136,9 +163,8 @@ input[type=checkbox]:checked ~ #dropdown_List {
 /* Main Section */
 
 .product_List{
-    padding: 25px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
     width: 100%;
@@ -151,32 +177,42 @@ input[type=checkbox]:checked ~ #dropdown_List {
 .product{
     background-color: #fff;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .product_Detail_Preview{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px;
-    border: 1px solid var(--Gris_Intermedio);
+    position: relative;
+    flex-wrap: wrap;
+    padding: 15px;
+    border: 1px solid var(--Gris_claro);
+    gap: 10px;
 }
 
 .product_Detail_Preview p{
     margin: 2px 0;
 }
 
-.product_Detail_Preview h5{
-    margin: 5px 0;
+.product_Detail_Preview p:nth-child(4){
+    display: none;
+    color: var(--Gris_oscuro);
 }
 
 .product_Detail_Preview i{
-    font-size: 15px;
+    height: 30px;
+    width: 30px;
+    font-size: 16px;
+    display: block;
     border-radius: 50%;
     border: 1px solid var(--Verde);
     padding: 6px 5px 6px 6px;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
 .shipping_DiscountColor{
@@ -189,49 +225,169 @@ input[type=checkbox]:checked ~ #dropdown_List {
 
 /* Footer Section */
 
-footer ul {
+footer {
     padding: 20px 20px 5px 20px;
     background-color: #fff;
 }
 
-footer li{
-    color: var(--Gris_4);
-    text-decoration: none;
-    font-size: var(--descripcion);
-}
-
-.footer-text{
+.main-footer{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     text-align: center;
+    padding: 15px;
 }
 
-#iconsFooter ul div li i{
+.iconsFooter{
     color: var(--Celeste);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin: 10px 0;
 }
 
 #tituloIcon{
     color: var(--Gris_5);
     font-weight: bold;
-    font-size: var(--precios);
+    font-size: var(--descripcion);
 }
 
-#bottomSpace{
-    margin-bottom: 20px;
+.footerSections{
+    margin-top: 30px;
+    color: var(--Gris_oscuro);
+    font-size: var(--cuerpo);
 }
 
-#topSpace{
-    margin-top: 20px;
+.footerSections:nth-child(1)
+{
+    margin-top: 10px;
 }
 
-#iconSpaceBottom{
-    margin-bottom: 10px;
+.footerSections:nth-child(4)
+{
+    font-size: var(--cuerpo);
+    color: var(--Gris_oscuro);
 }
 
-@media (min-width: 991px) {
-    #logo{
-        max-width: 10%;
+/* Tablet */
+
+@media (min-width: 361px) {
+    .navBar{
+        text-align: center;
+        margin: auto;
+    }
+
+    .burgerButton{
+        display: none;
+    }
+
+    #dropdown_List{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: var(--cuerpo);
+    }
+
+    #dropdown_List section{
+        width: 50%;
+        margin: auto;
+        padding: 20px;
+    }
+    
+    #dropdown_List section a{
+        margin: 10px 10px;
+    }
+
+    #dropdown_List section:nth-child(2){
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .logo,
+    .searchBar,
+    .duesText{
+        width: 33%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .searchBar input,
+    .duesText{
+        font-size: var(--cuerpo);
+    }
+
+    .title{
+        text-align: start;
+    }
+
+    .product_List{
+        gap: 0;
+    }
+
+    .product{
+        width: 45%;
+    }
+
+    .product_Detail_Preview p:nth-child(4){
+        display: flex;
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 769px) {
+    .navBar{
+        text-align: center;
+        margin: auto;
+    }
+
+    .burgerButton{
+        display: none;
+    }
+
+    #dropdown_List{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: var(--descripcion);
+    }
+
+    #dropdown_List section{
+        width: 50%;
+        padding: 10px;
+    }
+    
+    #dropdown_List section a{
         margin: 10px 20px;
+    }
+
+    #dropdown_List section:nth-child(2){
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .logo,
+    .searchBar,
+    .duesText{
+        width: 33%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .searchBar input,
+    .duesText{
+        font-size: var(--precios);
+    }
+
+    .title{
+        text-align: start;
+    }
+
+    .product_List{
+        gap: 0;
+    }
+
+    .product{
+        width: 22%;
+    }
+
+    .product_Detail_Preview p:nth-child(4){
+        display: flex;
     }
 }
