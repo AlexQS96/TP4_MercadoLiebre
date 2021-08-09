@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css" >
     <script src="/js/scripts.js"></script>
     <link rel="icon" type="image/png" href="/images/favicon-32x32.png">
 
@@ -51,54 +51,62 @@
                 <i href="javascript:void(0);" onclick="burgerButton()" class="fas fa-bars"></i>
             </div>
 
-            <img id="banner_Img" src="/images/img-home-banner.jpg" alt="banner">
         </header>
         <main>
-            <section>
-                <h1 class="title">Basado en tu ultima visita</h1>
-                <div class="product_List">
-                    <article class="product">
-                        <img class="productImage"
-                        src="/images/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
-                        <div class="product_Detail_Preview">
-                            <i class="fas fa-truck shipping_DiscountColor"></i>
-                            <p>$6.770</p>
-                            <p class="shipping_DiscountColor">40% OFF</p>
-                            <p>Cafetera Moulinex</p>
-                        </div>
-                    </article>
-                    <article class="product">
-                        <img class="productImage"
-                        src="/images/img-macbook-pro-2019.jpg" alt="Macbook Pro 2019">
-                        <div class="product_Detail_Preview">
-                            <i class="fas fa-truck shipping_DiscountColor"></i>
-                            <p>$216.770</p>
-                            <p class="shipping_DiscountColor">40% OFF</p>
-                            <p>Macbook Pro 2019</p>
-                        </div>
-                    </article>
-                    <article class="product">
-                        <img class="productImage"
-                        src="/images/img-samsung-galaxy-s10.jpg" alt="S10">
-                        <div class="product_Detail_Preview">
-                            <i class="fas fa-truck shipping_DiscountColor"></i>
-                            <p>$45.770</p>
-                            <p class="shipping_DiscountColor">20% OFF</p>
-                            <p>Samsung Galaxy S10</p>
-                        </div>
-                    </article>
-                    <article class="product">
-                        <img class="productImage"
-                        src="/images/img-tv-samsung-smart.jpg" alt="Smart TV">
-                        <div class="product_Detail_Preview">
-                            <i class="fas fa-truck shipping_DiscountColor"></i>
-                            <p>$42.770</p>
-                            <p class="shipping_DiscountColor">30% OFF</p>
-                            <p>Samsung Smart TV</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
+            <form action="" method="" class="register_Box">
+                <section>
+                    <input type="text" name="nameSurname" id="nameSurname" placeholder="Nombre y Apellido">
+                </section>
+                <section>
+                    <input type="text" name="username" id="username" placeholder="Nombre de Usuari@">
+                </section>
+                <section>
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                </section>
+                <section>
+                    <label for="birthDay">Fecha de nacimiento</label>
+                    <input type="date" name="birthDay" id="birthDay">
+                </section>
+                <section>
+                    <input type="text" name="adress" id="adress" placeholder="Domicilio">
+                </section>
+                <section>
+                    <label for="userType">Perfil de Usuario</label>
+                    <div class="userTypeBox">
+                        <input type="radio" name="userType" id="buyer">
+                        <p>Comprador</p>
+                        <input type="radio" name="userType" id="seller">
+                        <p>Vendedor</p>
+                    </div>
+                </section>
+                <section>
+                    <label for="interests">Intereses</label>
+                    <div class="userInterest">
+                        <input type="checkbox" name="interest1" id="electro">
+                        <p>Electro</p>
+                        <input type="checkbox" name="interest2" id="moda">
+                        <p>Moda</p>
+                        <input type="checkbox" name="interest3" id="hogar">
+                        <p>Hogar</p>
+                        <input type="checkbox" name="interest4" id="juguetes">
+                        <p>Jugueteria</p>
+                        <input type="checkbox" name="interest5" id="salud">
+                        <p>Vida Sana</p>
+                    </div>
+                </section>
+                <section>
+                    <label for="profilePhoto">Foto de Usuario</label>
+                    <input type="file" name="profilePhoto" id="profilePhoto">
+                </section>
+                <section>
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                </section>
+                <section>
+                    <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirmar Contraseña">
+                </section>
+                <button type="submit" onclick="location.href='/'">Enviar</button>
+                <button type="reset">Borrar</button>
+            </form>
         </main>
         <footer>
             <div class="main-footer">

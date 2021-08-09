@@ -43,11 +43,6 @@ header{
     background-color:var(--Amarillo);
 }
 
-.title{
-    padding:20px 0;
-    color: var(--Gris_oscuro);
-}
-
 main{
     width: 90%;
     text-align: center;
@@ -68,6 +63,11 @@ main{
   
 
 /* Header */
+
+.title{
+    padding:20px 0;
+    color: var(--Gris_oscuro);
+}
 
 .navBar{
     display: flex;
@@ -139,17 +139,9 @@ main{
     margin-top: 1px;
 }
 
-input[type=checkbox] {
-    display: none;
-}
-
 #dropdown_List {
     display: none;
     font-size: var(--cuerpo);
-}
-
-input[type=checkbox]:checked ~ #dropdown_List {
-    display: block;
 }
 
 #dropdown_List section{
@@ -160,7 +152,7 @@ input[type=checkbox]:checked ~ #dropdown_List {
 
 /* End Button Burger */
 
-/* Main Section */
+/* Main Section Home*/
 
 .product_List{
     display: flex;
@@ -223,6 +215,100 @@ input[type=checkbox]:checked ~ #dropdown_List {
     padding-bottom: 10px;
 }
 
+/* Register Section */
+
+.register_Box{
+    width: 90%;
+    margin: 20px auto 0 auto;
+}
+
+.register_Box section input{
+    outline: none;
+    border-style: none;
+    border-radius: 0.3rem;
+    padding: 10px;
+    margin: 15px auto;
+    width: 100%;
+}
+
+.register_Box section label{
+    display: flex;
+    font-weight: bold;
+    margin: 5px auto;
+}
+.userInterest,
+.userTypeBox{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.userInterest,
+.userTypeBox{
+    margin: 10px auto;
+}
+
+.userTypeBox input[type="radio"]{
+    margin: auto 0;
+    width: 20%;
+}
+
+.userTypeBox p{
+    width: 30%;
+    text-align: start;
+}
+
+.userInterest p{
+    width: 70%;
+    text-align: start;
+    margin: 10px 0;
+}
+
+.userInterest input[type="checkbox"]{
+    margin: auto 0;
+    width: 20%;
+}
+
+.register_Box button{
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    background-color: var(--Celeste);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-style: none;
+    border-radius: 0.3rem;
+}
+
+/* Login */
+
+.login_Box{
+    width: 90%;
+    margin: 20px auto 0 auto;
+}
+
+.login_Box section input{
+    outline: none;
+    border-style: none;
+    border-radius: 0.3rem;
+    padding: 10px;
+    margin: 15px auto;
+    width: 100%;
+}
+
+.login_Box button{
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    background-color: var(--Celeste);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-style: none;
+    border-radius: 0.3rem;
+}
+
 /* Footer Section */
 
 footer {
@@ -266,6 +352,8 @@ footer {
     font-size: var(--cuerpo);
     color: var(--Gris_oscuro);
 }
+
+/* Media Queries */
 
 /* Tablet */
 
@@ -328,6 +416,17 @@ footer {
 
     .product_Detail_Preview p:nth-child(4){
         display: flex;
+    }
+
+    .login_Box,
+    .register_Box{
+        width: 50%;
+        font-size: var(--precios);
+    }
+
+    .login_Box,
+    .register_Box input{
+        font-size: var(--precios);
     }
 
     .main-footer{
@@ -417,6 +516,17 @@ footer {
 
     .product_Detail_Preview p:nth-child(4){
         display: flex;
+    }
+
+    .login_Box,
+    .register_Box{
+        width: 35%;
+        font-size: var(--precios);
+    }
+
+    .login_Box,
+    .register_Box input{
+        font-size: var(--precios);
     }
 
     .main-footer{
