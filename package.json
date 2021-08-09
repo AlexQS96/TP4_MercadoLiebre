@@ -1,7 +1,7 @@
 {
-  "name": "tp4_mercadoliebre",
-  "version": "1.0.0",
-  "description": "",
+  "name": "mercado_liebre",
+  "version": "1.0.1",
+  "description": "TP de MercadoLiebre",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +18,9 @@
   "homepage": "https://github.com/AlexQS96/TP4_MercadoLiebre#readme",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [
+    "mercadoliebre"
+  ]
 }
