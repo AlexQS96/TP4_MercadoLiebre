@@ -171,9 +171,10 @@ main{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     width: 100%;
     margin-bottom: 20px;
+    transition: 0.3s ease-in;
+    z-index: 300;
 }
 
 .product_Detail_Preview{
@@ -183,15 +184,30 @@ main{
     padding: 15px;
     border: 1px solid var(--Gris_claro);
     gap: 10px;
+    transition: 1s ease-in;
+    height: 95px;
 }
 
 .product_Detail_Preview p{
     margin: 2px 0;
 }
 
-.product_Detail_Preview p:nth-child(4){
+#product_Name{
     display: none;
     color: var(--Gris_oscuro);
+    justify-content: center;
+}
+
+.product:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.product img:hover + .product_Detail_Preview i{
+    transform: rotate(-90deg);
+}
+
+.product:hover #product_Name{
+    display: flex;
 }
 
 .product_Detail_Preview i{
@@ -205,6 +221,7 @@ main{
     position: absolute;
     right: 20px;
     top: -15px;
+    transition: 1s all ease-in;
 }
 
 .shipping_DiscountColor{
@@ -307,6 +324,10 @@ main{
     width: 100%;
     border-style: none;
     border-radius: 0.3rem;
+}
+
+.login_Box button:hover{
+    background-color: #0022AA;
 }
 
 /* Footer Section */
@@ -414,10 +435,6 @@ footer {
         width: 45%;
     }
 
-    .product_Detail_Preview p:nth-child(4){
-        display: flex;
-    }
-
     .login_Box,
     .register_Box{
         width: 50%;
@@ -514,9 +531,6 @@ footer {
         width: 22%;
     }
 
-    .product_Detail_Preview p:nth-child(4){
-        display: flex;
-    }
 
     .login_Box,
     .register_Box{
@@ -540,7 +554,7 @@ footer {
     }
 
     #tituloIcon{
-        height: 30px;
+        height: 45px;
         font-size: var(--precios);
     }
 
