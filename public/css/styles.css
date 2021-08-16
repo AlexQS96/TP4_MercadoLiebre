@@ -199,17 +199,21 @@ main{
     justify-content: center;
 }
 
+/* Hovers */
+
 .product:hover{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-.product img:hover + .product_Detail_Preview i{
+.product:hover .product_Detail_Preview i{
     transform: rotate(-90deg);
 }
 
 .product:hover #product_Name{
     display: flex;
 }
+
+/* End Hovers */
 
 .product_Detail_Preview i{
     height: 30px;
@@ -297,6 +301,10 @@ main{
     width: 100%;
     border-style: none;
     border-radius: 0.3rem;
+}
+
+.register_Box button:hover{
+    background-color: #0022AA;
 }
 
 /* Login */
