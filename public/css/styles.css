@@ -175,6 +175,7 @@ main{
     margin-bottom: 20px;
     transition: 0.3s ease-in;
     z-index: 300;
+    cursor: pointer;
 }
 
 .product_Detail_Preview{
@@ -183,7 +184,7 @@ main{
     flex-wrap: wrap;
     padding: 15px;
     border: 1px solid var(--Gris_claro);
-    gap: 10px;
+    gap: 20px;
     transition: 1s ease-in;
     height: 95px;
 }
